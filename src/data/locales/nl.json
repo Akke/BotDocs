@@ -1,0 +1,14 @@
+{
+    "categories": "Categoriën",
+    "commands": "Commands",
+    "search_placeholder": "Zoek op command of omschrijving...",
+    "permissions": "Machtigingen",
+    "menu_link_more": "Meer",
+    "footer_copyright_domain": "© {{domain}} – Alle rechten voorbehouden.",
+    "footer_copyright_disclaimer": "Wij zijn niet verwant, gemachtigd of geassocieerd met Discord LTD. of eender andere producten of services gelevered door.",
+    "command_view_return": "Ga terug naar de commands lijst",
+    "command_view_bot_default_prefix": "De bot zijn standaard prefix.",
+    "command_view_arguments": "Argumenten",
+    "command_view_usage": "Gebruik",
+    "command_view_argument_required": "verplicht"
+}
