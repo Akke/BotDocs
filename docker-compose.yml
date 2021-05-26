@@ -1,0 +1,6 @@
+version: "3.4"
+services:
+    botdocs:
+        build: .
+        ports:
+            - 3000:3000
