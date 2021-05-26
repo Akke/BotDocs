@@ -1,3 +1,5 @@
+[![Version](https://badge.fury.io/gh/Akke%2FBotDocs.svg)](https://badge.fury.io/gh/Akke%2FBotDocs) [![GitHub Release](https://img.shields.io/github/release/Akke/BotDocs.svg?style=flat)]()  [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://opensource.org/licenses/MIT)
+
 # BotDocs — Document your Discord bot
 BotDocs is a simple and lightweight file-based, stateless command documentation software for your Discord bot. One does in fact not fit all, and have therefore designed this project with a lot of configuration and customization options in mind, making sure you can tailor it to your taste.
 
@@ -10,6 +12,16 @@ BotDocs is a simple and lightweight file-based, stateless command documentation 
 * Custom pages (create custom pages, separated from the commands, e.g. ToS page)
 
 And most importantly, it's completely open source and **free to use**.
+
+# Overview
+* [Installation](README.md#Installation)
+    * [Setting up your commands](README.md#Setting-up-your-commands)
+* [Configuration](README.md#Configuration)
+* [Translations](README.md#Translations)
+* [Themes](README.md#Themes)
+* [Custom Pages](README.md#Custom-Pages)
+* [Extending Commands](README.md#Extending-Commands)
+* [Need Help?](README.md#need-help)
 
 ## Installation
 1. Download the latest release (https://github.com/Akke/BotDocs/releases/latest) from the releases page.
@@ -157,4 +169,5 @@ If you have a category called `moderation` and a command named `ban`, you can th
 
 You can use this method if you wish to explain into further detail how a command works, or if you wish to include images, links, and so on.
 
-
+# Need help?
+There is no official place to ask for help as of yet, but you can either open an issue in this repo or send me a friend request on discord at **Axwell#0538** and I will get back to you as soon as possible.
