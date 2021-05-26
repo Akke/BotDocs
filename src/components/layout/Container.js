@@ -29,7 +29,7 @@ export default function LayoutContainer({ children }) {
                 </div>
 
                 <div className={styles.layout__footer}>
-                    <div className={styles["layout__footer-copyright"]}>{t("footer_copyright_domain")}</div>
+                    <div className={styles["layout__footer-copyright"]}>{t("footer_copyright_domain", { domain: window.location.host })}</div>
                     <div className={styles["layout__footer-disclaimer"]}>{t("footer_copyright_disclaimer")}</div>
                 </div>
             </div>

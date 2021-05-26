@@ -1,0 +1,14 @@
+{
+    "categories": "Kategoriler",
+    "commands": "Komutlar",
+    "search_placeholder": "Komut veya açıklama için arama...",
+    "permissions": "Izinler",
+    "menu_link_more": "Daha fazla",
+    "footer_copyright_domain": "© {{domain}} – Her hakkı saklıdır.",
+    "footer_copyright_disclaimer": "Discord LTD. veya discordun yan kuruluşları veya iştirakleri tarafından herhangi bir şekilde ilişkili, yetkilendirilmiş, onaylanmış veya resmi olarak bağlantılı değiliz ",
+    "command_view_return": "Komut listesine dön",
+    "command_view_bot_default_prefix": "Botun varsayılan öneki",
+    "command_view_arguments": "Argümanlar",
+    "command_view_usage": "Kullanım",
+    "command_view_argument_required": "Gereklidir"
+}

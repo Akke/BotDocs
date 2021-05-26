@@ -1,0 +1,14 @@
+{
+    "categories": "Kategorier",
+    "commands": "Kommandon",
+    "search_placeholder": "Sök med kommando eller beskrivning...",
+    "permissions": "Rättigheter",
+    "menu_link_more": "Mer",
+    "footer_copyright_domain": "© {{domain}} – Alla rättigheter är reserverade.",
+    "footer_copyright_disclaimer": "Vi är inte assosierade, auktoriserade, godkända av eller på något sätt officiellt kopplade till Discord LTD., eller några av dess dotterbolag eller partners.",
+    "command_view_return": "Återvänd till kommandolistan",
+    "command_view_bot_default_prefix": "Bottens standard prefix",
+    "command_view_arguments": "Argument",
+    "command_view_usage": "Användning",
+    "command_view_argument_required": "obligatorisk"
+}

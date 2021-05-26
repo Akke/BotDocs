@@ -4,7 +4,7 @@
     "search_placeholder": "Search by command or description...",
     "permissions": "Permissions",
     "menu_link_more": "More",
-    "footer_copyright_domain": "© spyral.gg – All rights reserved.",
+    "footer_copyright_domain": "© {{domain}} – All rights reserved.",
     "footer_copyright_disclaimer": "We are not associated, authorized, endorsed by, or in any way officially connected with Discord LTD., or any of its subsidiaries or its affiliates.",
     "command_view_return": "Return to the commands list",
     "command_view_bot_default_prefix": "The bots default prefix",
