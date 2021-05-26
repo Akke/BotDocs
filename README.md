@@ -81,20 +81,20 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
 * `menu_links` - Custom link properties to replace the default static menu (icons will be disabled). To disable, leave the arrays empty.
     * ```json
-       "menu_links": {
-        "default": [
-            {
-                "name": "Custom Home Link",
-                "target": "/"
-            }
-        ],
-        "custom_pages": [
-            {
-                "name": "Terms of Service",
-                "target": "/page/tos"
-            }
-        ]
-    }
+      "menu_links": {
+            "default": [
+                {
+                    "name": "Custom Home Link",
+                    "target": "/"
+                }
+            ],
+            "custom_pages": [
+                {
+                    "name": "Terms of Service",
+                    "target": "/page/tos"
+                }
+            ]
+        }
     ```
     
 * `logo_url` - Public path to the url of your logo to display above the menu (e.g. `/static/images/logos/mylogo.png`)
