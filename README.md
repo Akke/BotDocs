@@ -94,8 +94,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
                     "target": "/page/tos"
                 }
             ]
-        }
-    ```
+        }```
     
 * `logo_url` - Public path to the url of your logo to display above the menu (e.g. `/static/images/logos/mylogo.png`)
 * `category_colors` - Custom color codes for your categories to add some variety to the design (leave empty to use the themes primary color instead).
