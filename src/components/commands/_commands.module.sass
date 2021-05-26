@@ -20,6 +20,21 @@
         border-bottom: 1px solid $commands-search-border-bottom-color
         padding-bottom: 1em
 
+        &--isCategory
+            .currentCategory
+                display: block !important
+                position: absolute
+                background-color: $commands-search-marker-background-color
+                color: $commands-search-marker-text-color
+                font-weight: bold
+                margin: 1em
+                text-transform: capitalize
+                padding: 0 0.5em
+                @include borderRadius($commands-search-marker-border-radius)
+
+        .currentCategory
+            display: none
+
         &-icon
             position: absolute
             right: 1em
