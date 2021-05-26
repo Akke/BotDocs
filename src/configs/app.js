@@ -1,6 +1,6 @@
 module.exports = {
     "list_mode": "default",
-    "locale": "en-GB",
+    "locale": "en",
     "enable_pages": true,
     "menu_links": {
         "default": [],
