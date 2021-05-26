@@ -4,7 +4,7 @@ BotDocs is a simple and lightweight file-based, stateless command documentation 
 **Primary features**
 * Organized documentation of commands, with arguments, aliases, usage examples and much more.
 * Extended command descriptions (replace the JSON description property with data from an .md file)
-* Multi-language support: English and Swedish.
+* Multi-language support: English, Swedish and Turkish.
 * Simple and sleek frontend design with custom theme support (comes with 3 themes by default: light, midnight and discord)
 * Extensive configuration support
 * Custom pages (create custom pages, separated from the commands, e.g. ToS page)
@@ -78,6 +78,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
 * `locale` - The language all static text should be in, using ISO 639-1 language codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) **Note: Locales must be added manually before building the application. See below for more information.**
     * `en-GB` (default)
     * `sv`
+    * `tr`
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
 * `menu_links` - Custom link properties to replace the default static menu (icons will be disabled). To disable, leave the arrays empty.
     * ```json
@@ -107,20 +108,11 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
 
 ## Translations
 Translations are supported if added manually before compiling the application. To do this, you must create a file in `src/data/locales` using an ISO 639-1 language code for the name (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). 
-```json
+```
 {
     "categories": "Categories",
     "commands": "Commands",
-    "search_placeholder": "Search by command or description...",
-    "permissions": "Permissions",
-    "menu_link_more": "More",
-    "footer_copyright_domain": "© {{domain}} – All rights reserved.",
-    "footer_copyright_disclaimer": "We are not associated, authorized, endorsed by, or in any way officially connected with Discord LTD., or any of its subsidiaries or its affiliates.",
-    "command_view_return": "Return to the commands list",
-    "command_view_bot_default_prefix": "The bots default prefix",
-    "command_view_arguments": "Arguments",
-    "command_view_usage": "Usage",
-    "command_view_argument_required": "required"
+    ...
 }
 ```
 Translate the text on the right and leave the keys and variables wrapped in `{{}}` tags alone. You must also modify `src/utils/i18n.js` and import the new language file.
