@@ -1,0 +1,14 @@
+{
+    "categories": "カテゴリ",
+    "commands": "コマンド",
+    "search_placeholder": "コマンドまたは説明で検索...",
+    "permissions": "権限",
+    "menu_link_more": "もっと",
+    "footer_copyright_domain": "© {{domain}} – 全著作権所有.",
+    "footer_copyright_disclaimer": "当社は、Discord LTD.またはその子会社またはその関連会社と正式に関連付け、承認、承認、またはいかなる方法でも関連付けられていない。.",
+    "command_view_return": "コマンドリストに戻る",
+    "command_view_bot_default_prefix": "ボットのデフォルトのプレフィックス",
+    "command_view_arguments": "引数",
+    "command_view_usage": "使用法",
+    "command_view_argument_required": "必須"
+}
