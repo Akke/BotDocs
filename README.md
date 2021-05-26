@@ -52,12 +52,12 @@ module.exports = {
 `Informative` is the category name, where commands should be grouped, but if you don't have any clear categories it would be more suitable to create a "generic" category and place all of your commands inside of that.
 
 The following properties must exist for the application to behave correctly:
-* name (string)
-* aliases (array with strings)
-* description (string)
-* usage (string)
-* params (array with objects, see example above)
-* **If a command requires a specific permission set:** permissions (object, see example above)
+* `name` (string)
+* `aliases` (array with strings)
+* `description (string)
+* `usage (string)
+* `params (array with objects, see example above)
+* **If a command requires a specific permission set:** `permissions (object, see example above)
 
 ## Configuration
 
