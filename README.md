@@ -78,6 +78,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
 * `locale` - The language all static text should be in, using ISO 639-1 language codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) **Note: Locales must be added manually before building the application. See below for more information.**
     * `en-GB` (default)
     * `sv`
+    * `tr`
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
 * `menu_links` - Custom link properties to replace the default static menu (icons will be disabled). To disable, leave the arrays empty.
     * ```json
