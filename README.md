@@ -111,16 +111,7 @@ Translations are supported if added manually before compiling the application. T
 {
     "categories": "Categories",
     "commands": "Commands",
-    "search_placeholder": "Search by command or description...",
-    "permissions": "Permissions",
-    "menu_link_more": "More",
-    "footer_copyright_domain": "© {{domain}} – All rights reserved.",
-    "footer_copyright_disclaimer": "We are not associated, authorized, endorsed by, or in any way officially connected with Discord LTD., or any of its subsidiaries or its affiliates.",
-    "command_view_return": "Return to the commands list",
-    "command_view_bot_default_prefix": "The bots default prefix",
-    "command_view_arguments": "Arguments",
-    "command_view_usage": "Usage",
-    "command_view_argument_required": "required"
+    ...
 }
 ```
 Translate the text on the right and leave the keys and variables wrapped in `{{}}` tags alone. You must also modify `src/utils/i18n.js` and import the new language file.
