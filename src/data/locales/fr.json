@@ -1,0 +1,14 @@
+{
+    "categories": "Catégories",
+    "commands": "Commandes",
+    "search_placeholder": "Chercher par commande ou description...",
+    "permissions": "Permissions",
+    "menu_link_more": "Plus",
+    "footer_copyright_domain": "© {{domain}} – All rights reserved.",
+    "footer_copyright_disclaimer": "Nous ne sommes en aucun cas associé, autorisé,  approuvé  ou sous n'importe quel forme, officiellement lié a Discord LTD., ou l'une de ses filiales ou ses sociétés affiliées.",
+    "command_view_return": "Retourner vers la liste des commandes",
+    "command_view_bot_default_prefix": "Prefix par défaut du bot",
+    "command_view_arguments": "Arguments",
+    "command_view_usage": "Utilisation",
+    "command_view_argument_required": "requis"
+}
