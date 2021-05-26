@@ -1,6 +1,8 @@
 # BotDocs — Document your Discord bot
 BotDocs is a simple and lightweight file-based, stateless command documentation software for your Discord bot. One does in fact not fit all, and have therefore designed this project with a lot of configuration and customization options in mind, making sure you can tailor it to your taste.
 
+[a relative link](#Installation)
+
 **Primary features**
 * Organized documentation of commands, with arguments, aliases, usage examples and much more.
 * Extended command descriptions (replace the JSON description property with data from an .md file)
