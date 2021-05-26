@@ -143,12 +143,14 @@ const resources = {
 When all is set, you can change the language in the configuration file.
 
 ## Themes
-You can change the color scheme and a lot of other properties of the design which is done in SASS. Locate the file `src/styles/theme.sass` and import the theme you wish to use, and comment out the inactive ones.
+You can change the color scheme and a lot of other properties of the design which is done in SASS. Locate the file `src/styles/theme.sass` and import the theme you wish to use, and comment out the inactive ones. 
 ```sass
 @import "themes/light"
 //@import "themes/discord"
 //@import "themes/midnight"
 ```
+To edit an existing theme, find the theme inside the themes directory and edit the variables found within.
+
 If you want to create a new theme, simply make a new file in `src/styles/themes/your-new-file.sass` and copy/paste the variables from an existing theme file.
 
 ## Custom Pages
@@ -162,3 +164,5 @@ Just like you can create custom pages, you can also extend command descriptions 
 If you have a category called `moderation` and a command named `ban`, you can then create the file `src/data/commands/moderation/ban.md` and everything inside this file will replace the default description property in the commands file.  
 
 You can use this method if you wish to explain into further detail how a command works, or if you wish to include images, links, and so on.
+
+
