@@ -1,0 +1,49 @@
+@import "../../styles/includes"
+@import "../../styles/theme"
+
+.categories
+    width: $categories-width
+
+    &__caption
+        text-transform: uppercase
+        font-weight: bold
+        color: $categories-caption-text-color
+        padding: 1em 0
+
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+
+        .category
+            padding: 1em
+            @include borderRadius($categories-item-radius)
+            @include transition(background-color, 0.1s, ease)
+            cursor: pointer
+
+            &--active
+                background-color: $categories-item-background-color-active
+
+            &__title
+                font-weight: bold
+                color: $categories-item-text-color
+                display: flex
+                align-items: center
+
+                &-marker
+                    background-color: $theme-primary-color
+                    margin-right: 1em
+                    height: $categories-item-title-marker-size
+                    width: $categories-item-title-marker-size
+                    @include borderRadius($categories-item-title-marker-radius)
+
+                &-counter
+                    background-color: $categories-item-title-counter-background-color
+                    padding: 0 0.5em
+                    @include borderRadius($categories-item-title-counter-radius)
+                    margin-left: auto
+                    color: $categories-item-title-counter-text-color
+                    font-size: $categories-item-title-counter-font-size
+
+            &:hover
+                background-color: $categories-item-background-color-hover

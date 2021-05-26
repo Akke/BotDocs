@@ -1,0 +1,42 @@
+@mixin borderRadius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -o-border-radius: $radius
+    border-radius: $radius
+
+@mixin transition($property, $time, $effect)
+    -webkit-transition: $property $time $effect
+    -moz-transition: $property $time $effect
+    -o-transition: $property $time $effect
+    transition: $property $time $effect
+
+@mixin boxShadow($shadow)
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    -o-box-shadow: $shadow
+    box-shadow: $shadow
+
+@mixin pointerEvents($event)
+    -webkit-pointer-events: $event
+    -moz-pointer-events: $event
+    -o-pointer-events: $event
+    pointer-events: $event
+
+@mixin animation($animation, $time, $effect)
+    -webkit-animation: $animation $time $effect
+    -moz-animation: $animation $time $effect
+    -o-animation: $animation $time $effect
+    animation: $animation $time $effect
+
+@mixin placeholder
+    &::-webkit-input-placeholder
+        @content
+
+    &:-moz-placeholder
+        @content
+
+    &::-moz-placeholder
+        @content
+
+    &:-ms-input-placeholder
+        @content

@@ -1,0 +1,36 @@
+@import "theme"
+
+body, html
+    margin: 0
+    padding: 0
+    height: 100%
+    line-height: $theme-line-height
+    color: $theme-body-text-color
+    font: $theme-font-size $theme-font-family
+    background-color: $theme-background-color
+
+@font-face
+    src: url("/static/fonts/NotoSans-Regular.ttf") format("truetype")
+    font-family: "Noto Sans"
+    font-weight: 400
+    font-display: swap
+    font-style: normal
+
+@font-face
+    src: url("/static/fonts/NotoSans-Bold.ttf") format("truetype")
+    font-family: "Noto Sans"
+    font-weight: 600
+    font-display: swap
+    font-style: normal
+
+*
+    box-sizing: border-box
+    text-decoration: inherit
+    color: inherit
+    font-family: inherit
+
+h1, h2, h3, h4
+    color: $theme-heading-text-color
+
+#__next
+    height: 100%

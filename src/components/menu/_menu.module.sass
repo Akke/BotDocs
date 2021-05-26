@@ -1,0 +1,75 @@
+@import "../../styles/includes"
+@import "../../styles/theme"
+
+.menu
+    position: relative
+    width: $menu-width
+    margin: 1em 0
+
+    .links
+        display: flex
+        width: 100%
+        margin: 0 auto
+
+        &__item
+            @include borderRadius($menu-item-radius)
+            margin: 0 3em 0 0
+            position: relative
+            color: $menu-item-text-color
+
+            &-anchor
+                display: flex
+                align-items: center
+                cursor: pointer
+                @include transition(color, 0.1s, ease-in-out)
+
+                svg
+                    margin-right: 0.5em
+                    font-size: 1.4em
+
+                .caret
+                    display: inline-block
+                    width: 0
+                    height: 0
+                    margin-left: 1em
+                    vertical-align: middle
+                    border-top: 4px dashed
+                    border-top: 4px solid\9
+                    border-right: 4px solid transparent
+                    border-left: 4px solid transparent
+
+            .dropdown
+                background-color: $menu-item-dropdown-background-color
+                position: absolute
+                left: 50%
+                width: 15em
+                transform: translateX(-50%)
+                @include borderRadius($menu-item-dropdown-radius)
+                @include boxShadow($menu-item-dropdown-box-shadow)
+                display: none
+
+                a
+                    padding: 0.5em
+                    display: block
+                    color: $menu-item-dropdown-text-color
+                    margin: 0.5em
+                    @include transition(background-color, 0.1s, ease)
+                    @include borderRadius($menu-item-dropdown-radius)
+
+                    &:hover
+                        background-color: $menu-item-dropdown-background-color-hover
+
+            &--hasDropdown
+                &:hover
+                    .dropdown
+                        display: block
+
+            &--active
+                > a
+                    color: $menu-item-active-text-color
+
+            &:hover
+                color: $menu-item-hover-text-color
+
+            &:last-item
+                margin-bottom: 0

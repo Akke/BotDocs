@@ -1,0 +1,125 @@
+@import "../../styles/includes"
+@import "../../styles/theme"
+
+@keyframes slideIn
+    0%
+        opacity: 0
+        transform: translateX(2em)
+
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+.commandsView
+    width: $commands_view-view-width
+
+    .returnPage
+        font-weight: bold
+        display: inline-block
+        color: $commands_view-view-return-text-color
+        background: $commands_view-view-return-background-color
+        padding: 0.5em 1em
+        cursor: pointer
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.05)
+        @include transition(all, 0.1s, ease)
+        @include borderRadius($commands_view-view-return-radius)
+
+        &:hover
+            background-color: $commands_view-view-return-background-color-hover
+            color: $commands_view-view-return-text-color-hover
+            box-shadow: none
+
+        svg
+            font-size: 1.5em
+
+        &__title
+            display: flex
+            align-items: center
+
+    .command
+        padding: 1em 0
+        @include animation(slideIn, 0.2s, ease)
+
+        &__description
+            border-top: 1px $commands_view-view-command-description-border-style $commands_view-view-command-description-border-color
+            padding-top: 1em
+            margin-top: 2em
+
+            img
+                max-width: 100%
+                max-height: 100%
+                @include borderRadius($commands_view-view-command-description-image-radius)
+
+            h1, h2, h3, h4
+                color: $theme-body-text-color
+
+        &__header
+            display: flex
+            align-items: center
+
+            &-name
+                text-transform: uppercase
+
+            &-aliases
+                margin-left: 1em
+
+                ul
+                    list-style-type: none
+                    margin: 0
+                    padding: 0
+                    display: flex
+
+                    li
+                        background-color: $commands_view-view-command-alias-background-color
+                        padding: 0 0.5em
+                        margin-right: 0.5em
+                        @include borderRadius($commands_view-view-command-alias-radius)
+
+                        &:last-child
+                            margin-right: 0
+
+        &__arguments
+            margin: 2em 0
+            border-top: 1px $commands_view-view-command-argument-border-style $commands_view-view-command-argument-border-color
+
+            ul
+                list-style-type: none
+                margin: 0
+                padding: 0
+
+                .argument
+                    list-style-type: none
+                    margin-bottom: 1em
+
+                    &__description
+                        line-height: 2
+
+                    &__header
+                        display: flex
+
+                        &-name
+                            font-weight: bold
+                            color: $commands_view-view-command-argument-name-color
+
+                        &-type
+                            background-color: $commands_view-view-command-argument-type-background-color
+                            padding: 0 0.5em
+                            margin: 0 0.5em
+                            @include borderRadius($commands_view-view-command-argument-type-radius)
+
+                        &-required
+                            background-color: $commands_view-view-command-argument-required-background-color
+                            padding: 0 0.5em
+                            @include borderRadius($commands_view-view-command-argument-required-radius)
+
+        &__usage
+            &-example
+                background-color: $commands_view-view-command-usage-background-color
+                padding: 1em
+                @include borderRadius($commands_view-view-command-usage-radius)
+
+                &__prefix
+                    border-bottom: 1px dotted $theme-body-text-color
+                    font-weight: bold
+                    margin-right: 0.5em
+                    color: $theme-primary-color

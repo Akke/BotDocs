@@ -1,0 +1,168 @@
+@import "../../styles/includes"
+@import "../../styles/theme"
+
+@keyframes slideDown
+    0%
+        opacity: 0
+        transform: translateY(-2em)
+
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+.commands
+    width: $commands-width
+
+    &__search
+        position: relative
+        width: 100%
+        margin-bottom: 1em
+        border-bottom: 1px solid $commands-search-border-bottom-color
+        padding-bottom: 1em
+
+        &-icon
+            position: absolute
+            right: 1em
+            top: 1em
+            @include pointerEvents(none)
+
+            svg
+                font-size: 1.5em
+                opacity: 0.75
+
+        &-input
+            padding: 1em 10% 1em 1em
+            background-color: $commands-search-background-color
+            border: none
+            width: 100%
+            font-size: inherit
+            outline: none
+            @include borderRadius($commands-search-radius)
+            @include transition(background-color, 0.1s, ease)
+
+            @include placeholder
+                color: $commands-search-placeholder-text-color
+
+            &:focus
+                background: $commands-search-background-color-active
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06)
+
+    .command
+        display: flex
+        width: 100%
+        justify-content: space-between
+        flex-direction: row-reverse
+        cursor: pointer
+        padding: 1em
+        border-bottom: 1px dashed $commands-command-border-color
+        @include borderRadius($commands-command-border-radius)
+        @include animation(slideDown, 0.2s, ease)
+        @include transition(background-color, 0.1s, ease)
+
+        &__expand
+            display: flex
+            align-items: center
+
+            svg
+                font-size: 2em
+
+        &__context
+            width: $commands-context-width
+
+            &-preview
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                max-width: 100%
+
+            &-permissions
+                display: flex
+                margin-top: 0.5em
+                font-size: 0.9em
+
+                span
+                    font-weight: bold
+                    margin-right: 0.5em
+
+                ul
+                    list-style-type: none
+                    margin: 0
+                    padding: 0
+                    display: flex
+
+                    li
+                        background-color: $commands-context-permission-item-background-color
+                        padding: 0 0.5em
+                        @include borderRadius($commands-context-permission-item-radius)
+                        margin-right: 0.5em
+
+                        &:last-child
+                            margin-right: 0
+
+            &-title
+                display: flex
+                align-items: center
+                margin-bottom: 0.5em
+
+                &__category
+                    display: inline-block
+                    background-color: $commands-title-category-background-color
+                    color: $commands-title-category-text-color
+                    padding: 0 0.5em
+                    height: 1.5em
+                    margin-right: 1em
+                    font-weight: bold
+                    @include borderRadius($commands-title-category-radius)
+
+                &__trigger
+                    font-weight: bold
+                    color: $commands-title-trigger-color
+                    text-transform: uppercase
+
+        &:hover
+            background-color: $commands-command-background-color-hover
+            border-color: transparent
+
+        &:nth-child(1)
+            @include borderRadius(0.25rem 0.25rem 0 0)
+
+        &:last-child
+            @include borderRadius(0 0 0.25rem 0.25rem)
+            border-bottom: none
+
+    &--default
+        .command
+            width: 100%
+
+    &--cards
+        display: flex
+        flex-wrap: wrap
+        align-content: flex-start
+
+        .command
+            width: 48%
+            border: none
+            margin: 0.5em
+            border: 1px solid $commands-command-mode-cards-border-color
+            @include borderRadius($commands-command-mode-cards-radius)
+
+            &:hover
+                border-color: transparent
+
+            &:last-child
+                border-bottom: 1px solid $commands-command-mode-cards-border-color
+
+    &--compact
+        .command
+            width: 100%
+            padding: 0.5em
+
+            &__context
+                display: flex
+                align-items: center
+
+                &-preview, &-permissions
+                    display: none
+
+                &-title
+                    margin-bottom: 0
