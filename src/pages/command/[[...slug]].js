@@ -24,7 +24,7 @@ const CommandRoute = () => {
         * which would cause the application to send the user to /404. This solves that issue by waiting for the parameter to be available.
         */
         if(window.location.pathname !== "/command" && (!Object.keys(router.query).length || Object.keys(router.query).length < 1))
-            setTimeout(() => setReady(true), 1000);
+            setTimeout(() => setReady(true), 500);
         else
             setReady(true);
     }, [router.query])
