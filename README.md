@@ -94,15 +94,13 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
                 "target": "/page/tos"
             }
         ]
-    }
-    ```
+    }```
 * `logo_url` - Public path to the url of your logo to display above the menu (e.g. `/static/images/logos/mylogo.png`)
 * `category_colors` - Custom color codes for your categories to add some variety to the design (leave empty to use the themes primary color instead).
     * ```json
-    "category_colors": {
-        "moderation": "#F00"
-    }
-    ```
+      "category_colors": {
+           "moderation": "#F00"
+       }```
 
 ## Translations
 Translations are supported if added manually before compiling the application. To do this, you must create a file in `src/data/locales` using an ISO 639-1 language code for the name (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). 
