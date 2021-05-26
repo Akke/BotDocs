@@ -4,7 +4,7 @@ BotDocs is a simple and lightweight file-based, stateless command documentation 
 **Primary features**
 * Organized documentation of commands, with arguments, aliases, usage examples and much more.
 * Extended command descriptions (replace the JSON description property with data from an .md file)
-* Multi-language support: English and Swedish.
+* Multi-language support: English, Swedish and Turkish.
 * Simple and sleek frontend design with custom theme support (comes with 3 themes by default: light, midnight and discord)
 * Extensive configuration support
 * Custom pages (create custom pages, separated from the commands, e.g. ToS page)
