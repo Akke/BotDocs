@@ -76,9 +76,9 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
     * Cards: Commands displayed in a card view instead of a long list.
     * Compact: A list with reduced paddings to preserve space, as well as redacted permissions and description preview, to only display the command name.
 * `locale` - The language all static text should be in, using ISO 639-1 language codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) **Note: Locales must be added manually before building the application. See below for more information.**
-    * `en-GB` (default)
-    * `sv`
-    * `tr`
+    * `en` (default)
+    * `sv` (swedish)
+    * `tr` (turkish)
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
 * `menu_links` - Custom link properties to replace the default static menu (icons will be disabled). To disable, leave the arrays empty.
     * ```json
@@ -118,7 +118,7 @@ Translations are supported if added manually before compiling the application. T
 Translate the text on the right and leave the keys and variables wrapped in `{{}}` tags alone. You must also modify `src/utils/i18n.js` and import the new language file.
 
 ```js
-import localeEN from "../data/locales/en-GB.json";
+import localeEN from "../data/locales/en.json";
 import localeSV from "../data/locales/sv.json";
 // new import here
 
