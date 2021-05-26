@@ -3,7 +3,6 @@ import { countDeconstructedCategories } from "../../utils/json";
 import styles from "./_categories.module.sass";
 
 export default function List({ categories, commands, current, colors, t }) {
-    console.log(colors)
     return (
         <div className={styles.categories}>
             <div className={styles.categories__caption}>{t("categories")}</div>
