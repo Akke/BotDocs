@@ -30,7 +30,7 @@ And most importantly, it's completely open source and **free to use**.
 4. Double check your commands data in `src/configs/commands.js` (create it, if it doesn't already exist) **NOTE: See below for detailed information about the commands configuration.**
 5. Build BotDocs with `npm run build` (if you wish to run in developer mode without building, run `npm run dev`)
 6. Run BotDocs with `npm run start`
-7. (optional) See https://nextjs.org/docs/deployment for more deployment methods.
+7. (optional) See https://nextjs.org/docs/deployment for more deployment methods (e.g. Docker)
 
 ### Setting up your commands
 BotDocs only supports a single format of commands in form of an object currently.
@@ -170,4 +170,4 @@ If you have a category called `moderation` and a command named `ban`, you can th
 You can use this method if you wish to explain into further detail how a command works, or if you wish to include images, links, and so on.
 
 # Need help?
-There is no official place to ask for help as of yet, but you can either open an issue in this repo or send me a friend request on discord at **Axwell#0538** and I will get back to you as soon as possible.
+There is no official place to ask for help as of yet, but you can either open an issue in this repo or send me a friend request on discord at `Axwell#0538` and I will get back to you as soon as possible.
