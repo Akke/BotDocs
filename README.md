@@ -88,7 +88,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
     * Cards: Commands displayed in a card view instead of a long list.
     * Compact: A list with reduced paddings to preserve space, as well as redacted permissions and description preview, to only display the command name.
 * `locale` - The language all static text should be in, using ISO 639-1 language codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) **Note: Locales must be added manually before building the application. See below for more information.**
-    * `en` (default)
+    * `en` (english) **default**
     * `et` (estonian)
     * `fr` (french)
     * `jp` (japanese)
