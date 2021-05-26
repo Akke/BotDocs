@@ -1,0 +1,14 @@
+{
+    "categories": "Kategooriad",
+    "commands": "Käsklused",
+    "search_placeholder": "Otsi käsu või kirjelduse järgi...",
+    "permissions": "Õigused",
+    "menu_link_more": "Rohkem",
+    "footer_copyright_domain": "© {{domain}} – kõik õigused kaitstud.",
+    "footer_copyright_disclaimer": "Me ei ole seotud ega volitatud, kinnitatud ega mingil viisil ametlikult seotud Discord LTD-ga, ega selle tütar- ega sidusettevõtetega.",
+    "command_view_return": "Tagasi käskude loendisse",
+    "command_view_bot_default_prefix": "Robotite alg prefiks",
+    "command_view_arguments": "Argumendid",
+    "command_view_usage": "Kasutus",
+    "command_view_argument_required": "nõutud"
+}

@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import localeEN from "../data/locales/en.json";
+import localeET from "../data/locales/et.json";
 import localeFR from "../data/locales/fr.json";
 import localeJA from "../data/locales/ja.json";
 import localeNL from "../data/locales/nl.json";
@@ -11,6 +12,9 @@ import appConfig from "../configs/app";
 const resources = {
     en: {
         translation: localeEN
+    },
+    et: {
+        translation: localeET
     },
     fr: {
         translation: localeFR
