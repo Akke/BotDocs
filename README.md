@@ -4,7 +4,7 @@ BotDocs is a simple and lightweight file-based, stateless command documentation 
 **Primary features**
 * Organized documentation of commands, with arguments, aliases, usage examples and much more.
 * Extended command descriptions (replace the JSON description property with data from an .md file)
-* Multi-language support: English, Swedish and Turkish.
+* Multi-language support: English, Dutch, Swedish and Turkish.
 * Simple and sleek frontend design with custom theme support (comes with 3 themes by default: light, midnight and discord)
 * Extensive configuration support
 * Custom pages (create custom pages, separated from the commands, e.g. ToS page)
@@ -77,6 +77,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
     * Compact: A list with reduced paddings to preserve space, as well as redacted permissions and description preview, to only display the command name.
 * `locale` - The language all static text should be in, using ISO 639-1 language codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) **Note: Locales must be added manually before building the application. See below for more information.**
     * `en` (default)
+    * `nl` (dutch)
     * `sv` (swedish)
     * `tr` (turkish)
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
@@ -97,7 +98,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
             ]
         }
         ```
-    
+
 * `logo_url` - Public path to the url of your logo to display above the menu (e.g. `/static/images/logos/mylogo.png`)
 * `category_colors` - Custom color codes for your categories to add some variety to the design (leave empty to use the themes primary color instead).
     * ```json
@@ -107,7 +108,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
        ```
 
 ## Translations
-Translations are supported if added manually before compiling the application. To do this, you must create a file in `src/data/locales` using an ISO 639-1 language code for the name (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). 
+Translations are supported if added manually before compiling the application. To do this, you must create a file in `src/data/locales` using an ISO 639-1 language code for the name (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 ```
 {
     "categories": "Categories",
@@ -135,7 +136,7 @@ const resources = {
 When all is set, you can change the language in the configuration file.
 
 ## Themes
-You can change the color scheme and a lot of other properties of the design which is done in SASS. Locate the file `src/styles/theme.sass` and import the theme you wish to use, and comment out the inactive ones. 
+You can change the color scheme and a lot of other properties of the design which is done in SASS. Locate the file `src/styles/theme.sass` and import the theme you wish to use, and comment out the inactive ones.
 ```sass
 @import "themes/light"
 //@import "themes/discord"
@@ -146,14 +147,14 @@ To edit an existing theme, find the theme inside the themes directory and edit t
 If you want to create a new theme, simply make a new file in `src/styles/themes/your-new-file.sass` and copy/paste the variables from an existing theme file.
 
 ## Custom Pages
-You can also use BotDocs to serve regular, static pages, which you can disable in the configuration (enabled by default). Simply create file inside the `src/data/pages` directory with the `.md` suffix (markdown). 
+You can also use BotDocs to serve regular, static pages, which you can disable in the configuration (enabled by default). Simply create file inside the `src/data/pages` directory with the `.md` suffix (markdown).
 
 Files within the directory will create new URL handles depending on the file name and its subdirectories. For example, if you create `src/data/pages/helloworld.md` it will be served at `yoursite.com/page/helloworld`, and if you create `src/data/pages/my/extended/path/helloworld.md` it will be available at `yoursite.com/page/my/extended/path/helloworld`.
 
 ## Extending Commands
-Just like you can create custom pages, you can also extend command descriptions using a similar method, with `.md` files and syntax. 
+Just like you can create custom pages, you can also extend command descriptions using a similar method, with `.md` files and syntax.
 
-If you have a category called `moderation` and a command named `ban`, you can then create the file `src/data/commands/moderation/ban.md` and everything inside this file will replace the default description property in the commands file.  
+If you have a category called `moderation` and a command named `ban`, you can then create the file `src/data/commands/moderation/ban.md` and everything inside this file will replace the default description property in the commands file.
 
 You can use this method if you wish to explain into further detail how a command works, or if you wish to include images, links, and so on.
 
