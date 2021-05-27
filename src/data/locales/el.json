@@ -1,0 +1,14 @@
+{
+    "categories": "Κατηγορίες",
+    "commands": "Εντολές",
+    "search_placeholder": "Αναζήτησε με βάση την εντολή ή την περιγραφή...",
+    "permissions": "Άδειες",
+    "menu_link_more": "Περισσότερα",
+    "footer_copyright_domain": "© {{domain}} – Με επιφύλαξη κάθε νόμιμου δικαιώματος.",
+    "footer_copyright_disclaimer": "Δεν είμαστε συσχετισμένοι, εξουσιοδοτημένοι, εγκεκριμένοι από, ή με οποιοδήποτε τρόπο επίσημα συνδεδεμένοι με την Discord LTD., ή με κάποια από τις θυγατρικές εταιρείες της ή τους συνεργάτες της.",
+    "command_view_return": "Eπίστρεψε στην λίστα εντολών",
+    "command_view_bot_default_prefix": "Το προκαθορισμένο πρόθεμα του bot",
+    "command_view_arguments": "Επιχειρήματα",
+    "command_view_usage": "Χρήση",
+    "command_view_argument_required": "απαιτείται"
+}
