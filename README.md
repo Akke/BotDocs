@@ -1,17 +1,18 @@
 [![Version](https://badge.fury.io/gh/Akke%2FBotDocs.svg)](https://badge.fury.io/gh/Akke%2FBotDocs) [![GitHub Release](https://img.shields.io/github/release/Akke/BotDocs.svg?style=flat)]()  [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://opensource.org/licenses/MIT)
 
 # BotDocs — Document your Discord bot
-BotDocs is a simple and lightweight file-based, stateless command documentation software for your Discord bot. One does in fact not fit all, and have therefore designed this project with a lot of configuration and customization options in mind, making sure you can tailor it to your taste.
+BotDocs is a simple and lightweight file-based, stateless command documentation software for your Discord bot. One does in fact not fit all, and have therefore designed this project with a lot of configuration and customization options in mind, making sure you can tailor it to your taste. It's the best way to display all of your commands for your bot, and the necessary data that comes with it, in a sleek and elegant way.
 
-**Primary features**
-* Organized documentation of commands, with arguments, aliases, usage examples and much more.
-* Extended command descriptions (replace the JSON description property with data from an .md file)
-* Multi-language support: English, Dutch, Estonian, French, Japanese, Swedish and Turkish.
-* Simple and sleek frontend design with custom theme support (comes with 3 themes by default: light, midnight and discord)
-* Extensive configuration support
-* Custom pages (create custom pages, separated from the commands, e.g. ToS page)
+## Primary Features
+* **Completely free to use and open source.**
+* Display all of your bots commands, with their aliases, usage examples, argument parameters and much more.
+* Add more details to existing command descriptions by extending them with `.md` files.
+* Currently supports up to 8+ languages (and counting!)
+* Simple and clean design, with built-in support for customization through themes (comes with 3 themes by default: light, midnight and discord)
+* Enable, disable and extend several features of BotDocs with comprehensive configuration settings.
+* Create static pages, separate from commands, using `.md` files (useful for e.g. ToS and policy pages)
 
-And most importantly, it's completely open source and **free to use**.
+Want to suggest a new feature or feel like something needs an improvement? Don't be afraid to reach out to us — we're happy to hear your criticism.
 
 # Overview
 * [Installation](README.md#Installation)
@@ -33,7 +34,7 @@ And most importantly, it's completely open source and **free to use**.
 7. (optional) See https://nextjs.org/docs/deployment for more deployment methods (e.g. Docker)
 
 ### Setting up your commands
-BotDocs only supports a single format of commands in form of an object currently.
+BotDocs presents the commands by reading from a configuration file in `src/configs/commands.js` and takes a very specific object structure (as seen below). If your structure doesn't look like this, it's recommended that you pre-parse it on your own to make sure it's suited for the application, or if you don't wish to use categories at all — create all command objects under just one category.
 ```js
 module.exports = {
     "Informative": [
@@ -71,15 +72,18 @@ module.exports = {
     ]
 }
 ```
-`Informative` is the category name, where commands should be grouped, but if you don't have any clear categories it would be more suitable to create a "generic" category and place all of your commands inside of that.
+**Categories**
+* `Informative` - Name of the category which its children are put into. All commands inside each category will appear grouped similarly on the website.
 
-The following properties must exist for the application to behave correctly:
+**Properties**
 * `name` (string)
 * `aliases` (array with strings)
 * `description` (string)
 * `usage` (string)
 * `params` (array with objects, see example above)
 * **If a command requires a specific permission set:** `permissions` (object, see example above)
+
+If you're missing any property, you're likely to stumble upon multiple errors.
 
 ## Configuration
 The configuration that can be found in `src/configs/app.js` comes with many configuration options.
@@ -96,6 +100,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
     * `nl` (dutch)
     * `sv` (swedish)
     * `tr` (turkish)
+* `locale_fallback` - The language to fallback to in case a phrase is missing in the current active language (defaults to `en`)
 * `enable_pages` - Defaults to `true` and controls whether you want to enable custom pages. The menu link for custom pages will also disappear if set to `false`
 * `menu_links` - Custom link properties to replace the default static menu (icons will be disabled). To disable, leave the arrays empty.
     * ```json
@@ -149,7 +154,6 @@ const resources = {
     // new language object here, using ISO 639-1 codes
 };
 ```
-When all is set, you can change the language in the configuration file.
 
 ## Themes
 You can change the color scheme and a lot of other properties of the design which is done in SASS. Locate the file `src/styles/theme.sass` and import the theme you wish to use, and comment out the inactive ones.
