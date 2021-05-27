@@ -1,3 +1,4 @@
+@import "../../styles/includes"
 @import "../../styles/theme"
 
 .layout
@@ -8,6 +9,10 @@
     display: flex
     flex-direction: column
 
+    @include mediaScreen
+        width: 100%
+        padding: 1em
+
     .logo
         margin-bottom: 2em
 
@@ -16,9 +21,16 @@
         display: flex
         justify-content: space-between
 
+        @include mediaScreen
+            flex-direction: column
+            padding: 0
+
     &__footer
         margin-top: auto
         padding: 2em 0
+
+        @include mediaScreen
+            padding: 2em 0 1em 0
 
         &-copyright
             font-weight: bold
