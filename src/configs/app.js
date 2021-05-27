@@ -8,5 +8,6 @@ module.exports = {
         "custom_pages": []
     },
     "logo_url": "/static/images/logos/spyral.png",
-    "category_colors": {}
+    "category_colors": {},
+    "enable_footer_credits": true
 };

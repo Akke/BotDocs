@@ -12,6 +12,7 @@ const settings = {
     enablePages: AppConfig.enable_pages,
     menuLinks: AppConfig.menu_links,
     logoURL: AppConfig.logo_url,
+    enableFooterCredits: AppConfig.enable_footer_credits,
     t: null
 };
 

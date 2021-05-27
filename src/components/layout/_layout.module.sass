@@ -35,3 +35,21 @@
         &-copyright
             font-weight: bold
             color: $footer-copyright-domain-text-color
+
+        &-poweredBy
+            display: flex
+            align-items: center
+            margin: 1em 0 0 0
+
+            &:hover
+                @include transition(color, 0.1s, ease)
+
+                a
+                    color: $theme-primary-color
+
+            a
+                display: inherit
+
+            svg
+                font-size: 1.5em
+                margin-right: 0.25em
