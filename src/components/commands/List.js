@@ -3,10 +3,10 @@ import Link from "next/link";
 import Search from "./Search";
 import styles from "./_commands.module.sass";
 
-export default function List({ commands, mode, colors, isCategoryActive, currentCategory, onSearch, t }) {
+export default function List({ commands, mode, colors, isCategoryActive, onSearch, t }) {
     return (
         <div className={`${styles.commands} ${styles["commands--" + mode]}`}>
-            <Search onSearch={onSearch} isCategoryActive={isCategoryActive} currentCategory={isCategoryActive ? commands[0].category : undefined} t={t} />
+            <Search onSearch={onSearch} isCategoryActive={isCategoryActive} currentCategory={isCategoryActive ? commands[0].category : null} t={t} />
 
             {commands.map((command, i) => (
                 <Link href={command.url.full} shallow={true} key={i}>
