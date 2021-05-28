@@ -127,6 +127,7 @@ The configuration that can be found in `src/configs/app.js` comes with many conf
            "moderation": "#F00"
        }
        ```
+* `enable_footer_credits` - Toggles the "Powered by BotDocs" GitHub link in the page footer.
 
 ## Translations
 Translations are supported if added manually before compiling the application. To do this, you must create a file in `src/data/locales` using an ISO 639-1 language code for the name (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
