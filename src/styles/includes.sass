@@ -16,6 +16,12 @@
     -o-box-shadow: $shadow
     box-shadow: $shadow
 
+@mixin textShadow($shadow)
+    -webkit-text-shadow: $shadow
+    -moz-text-shadow: $shadow
+    -o-text-shadow: $shadow
+    text-shadow: $shadow
+
 @mixin pointerEvents($event)
     -webkit-pointer-events: $event
     -moz-pointer-events: $event

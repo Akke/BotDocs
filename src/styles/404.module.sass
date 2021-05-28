@@ -1,0 +1,30 @@
+@import "theme"
+@import "includes"
+
+.pageNotFound
+    background-color: $theme-background-color
+    color: $theme-body-text-color
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+
+    .header
+        font-size: 6em
+        margin: 0
+        @include textShadow(0 6px 0 $not-found-header-text-shadow)
+
+    .description
+        p
+            display: block
+            margin: 1em 0
+
+        .return
+            text-align: center
+            font-weight: bold
+            @include transition(color, 0.1s, ease)
+
+            &:hover
+                color: $theme-primary-color
