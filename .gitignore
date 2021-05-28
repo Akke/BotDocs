@@ -3,4 +3,3 @@ node_modules/
 src/data/commands/
 src/data/pages/
 src/configs/commands.js
-package-lock.json
