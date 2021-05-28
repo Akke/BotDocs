@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import "../../utils/i18n";
 
 export default function LayoutContainer({ children }) {
-    const settings = useAppContextProvider();
+    const context = useAppContextProvider();
 
     const { t } = useTranslation();
 
@@ -17,11 +17,11 @@ export default function LayoutContainer({ children }) {
             <Meta />
 
             <div className={styles.layout}>
-                <Logo url={settings.logoURL} />
+                <Logo url={context.config.logoURL} />
 
                 <Menu
-                    customLinks={settings.menuLinks}
-                    enablePages={settings.enablePages}
+                    customLinks={context.config.menuLinks}
+                    enablePages={context.config.enablePages}
                     t={t}
                 />
 
@@ -32,7 +32,7 @@ export default function LayoutContainer({ children }) {
                 <div className={styles.layout__footer}>
                     <div className={styles["layout__footer-copyright"]}>{t("footer_copyright_domain", { domain: window.location.host })}</div>
                     <div className={styles["layout__footer-disclaimer"]}>{t("footer_copyright_disclaimer")}</div>
-                    {settings.enableFooterCredits ? <div className={styles["layout__footer-poweredBy"]}><a href="https://github.com/Akke/BotDocs" title="Powered by BotDocs"><DiGithubBadge /> Powered by BotDocs</a></div> : null}
+                    {context.config.enableFooterCredits ? <div className={styles["layout__footer-poweredBy"]}><a href="https://github.com/Akke/BotDocs" title="Powered by BotDocs"><DiGithubBadge /> Powered by BotDocs</a></div> : null}
                 </div>
             </div>
         </>

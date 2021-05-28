@@ -8,7 +8,7 @@ import { useAppContextProvider } from "../contexts/AppContext";
 import { useCommandContextProvider } from "../contexts/CommandContext";
 
 export default function Index({ categoryFilter = null }) {
-    const settings = useAppContextProvider();
+    const context = useAppContextProvider();
 
     const { categories, commands } = useCommandContextProvider();
 
@@ -48,17 +48,17 @@ export default function Index({ categoryFilter = null }) {
                 categories={categories}
                 commands={commands}
                 current={router.asPath.split("/category")}
-                colors={settings.categoryColors}
-                t={settings.t}
+                colors={context.config.categoryColors}
+                t={context.func.t}
             />
 
             <Commands
                 commands={filtered}
-                mode={settings.listMode}
-                colors={settings.categoryColors}
+                mode={context.config.listMode}
+                colors={context.config.categoryColors}
                 isCategoryActive={typeof router.asPath.split("/category")[1] !== "undefined"}
                 onSearch={onSearch}
-                t={settings.t}
+                t={context.func.t}
             />
         </LayoutContainer>
     );

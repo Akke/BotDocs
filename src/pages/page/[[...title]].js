@@ -1,38 +1,27 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
+import { useAppContextProvider } from "../../contexts/AppContext";
+import { useCustomPageContextProvider } from "../../contexts/CustomPageContext";
 import LayoutContainer from "../../components/layout/Container";
 import Page from "../../components/customPages/Page";
-import usePages from "../../components/customPages/usePages";
 
 const CustomPageRoute = () => {
-    const router = useRouter();
+    const context = useAppContextProvider();
 
-    const { pages, error } = usePages();
+    const { pages } = useCustomPageContextProvider();
 
-    const [ready, setReady] = useState(false);
+    const routerMiddleware = context.middleware.router({
+        page: "/page",
+        requiredParams: [{
+            param: "title",
+            minLength: 1
+        }]
+    });
 
-    useEffect(() => {
-        /**
-        * Because of useRouter() being a hook, we can't always be sure that the query parameters are available at first render,
-        * which would cause the application to send the user to /404. This solves that issue by waiting for the parameter to be available.
-        */
-        if(window.location.pathname !== "/page" && (!Object.keys(router.query).length || Object.keys(router.query).length < 1))
-            setTimeout(() => setReady(true), 500);
-        else
-            setReady(true);
-    }, [router.query])
-
-    if(!ready || !pages)
+    if(!routerMiddleware.ready || !pages)
         return null;
 
-    const { title } = router.query;
-
-    if(!title) {
-        router.push("/404", null, { shallow: true });
-        return false;
-    }
+    const { title } = routerMiddleware.r.query;
 
     const current = pages.find(page => {
         const urlName = title[title.length-1];
@@ -54,7 +43,7 @@ const CustomPageRoute = () => {
     });
 
     if(!current) {
-        router.push("/404", null, { shallow: true });
+        routerMiddleware.r.push("/404", null, { shallow: true });
         return false;
     }
 
