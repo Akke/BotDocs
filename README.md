@@ -73,7 +73,7 @@ module.exports = {
 }
 ```
 **Categories**
-* `Informative` - Name of the category which its children are put into. All commands inside each category will appear grouped similarly on the website.
+* `Informative` (example) - Name of the category which its children are put into. All commands inside each category will appear grouped similarly on the website, you can name them however you like.
 
 **Properties**
 * `name` (string)
