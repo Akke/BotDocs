@@ -1,7 +1,7 @@
 import { TiChevronLeft } from "react-icons/ti";
 import styles from "./_view.module.sass";
 
-export default function View({ category, command, returnToHome, Markdown, t }) {
+export default function View({ category, command, returnToHome, Markdown, botPrefix, t }) {
     return (
         <div className={styles.commandsView}>
             <div className={styles.returnPage} onClick={() => returnToHome()}>
@@ -27,7 +27,8 @@ export default function View({ category, command, returnToHome, Markdown, t }) {
                     <h4>{t("command_view_usage")}</h4>
 
                     <div className={styles["command__usage-example"]}>
-                        <span className={styles["command__usage-example__prefix"]} title={t("command_view_bot_default_prefix")}>?</span>
+                        {botPrefix ? <span className={styles["command__usage-example__prefix"]} title={t("command_view_bot_default_prefix")}>{botPrefix}</span> : null }
+
                         {command.usage}
                     </div>
                 </div>

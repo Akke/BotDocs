@@ -124,10 +124,17 @@
             &-example
                 background-color: $commands_view-view-command-usage-background-color
                 padding: 1em
+                display: flex
+                align-items: center
+                font-family: monospace
                 @include borderRadius($commands_view-view-command-usage-radius)
 
                 &__prefix
-                    border-bottom: 1px dotted $theme-body-text-color
                     font-weight: bold
-                    margin-right: 0.5em
-                    color: $theme-primary-color
+                    margin: 0 1em 0 0
+                    font-family: $theme-font-family
+                    font-size: 1.25em
+                    color: $commands_view-view-command-usage-prefix-text-color
+                    padding: 0 0.5em
+                    background-color: $commands_view-view-command-usage-prefix-background-color
+                    @include borderRadius($commands_view-view-command-usage-prefix-border-radius)

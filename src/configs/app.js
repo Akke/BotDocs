@@ -1,4 +1,5 @@
 module.exports = {
+    "bot_prefix": "!",
     "list_mode": "default",
     "locale": "en",
     "locale_fallback": "en",

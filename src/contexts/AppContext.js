@@ -7,6 +7,7 @@ import AppConfig from "../configs/app";
 import "../utils/i18n";
 
 const settings = {
+    botPrefix: AppConfig.bot_prefix,
     listMode: AppConfig.list_mode,
     categoryColors: AppConfig.category_colors,
     enablePages: AppConfig.enable_pages,
