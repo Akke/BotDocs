@@ -57,7 +57,6 @@ export default function Index({ categoryFilter = null }) {
                 mode={settings.listMode}
                 colors={settings.categoryColors}
                 isCategoryActive={typeof router.asPath.split("/category")[1] !== "undefined"}
-                currentCategory={router.asPath.split("/category")[1]}
                 onSearch={onSearch}
                 t={settings.t}
             />
