@@ -69,12 +69,19 @@
         width: 100%
         justify-content: space-between
         flex-direction: row-reverse
+        align-items: center
         cursor: pointer
         padding: 1em
         border-bottom: 1px dashed $commands-command-border-color
         @include borderRadius($commands-command-border-radius)
         @include animation(slideDown, 0.2s, ease)
         @include transition(background-color, 0.1s, ease)
+
+        &--starred
+            svg
+                font-size: 2em
+                display: block
+                color: $commands-command-starred-text-color
 
         &__expand
             display: flex

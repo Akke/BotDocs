@@ -1,4 +1,4 @@
-import { TiChevronRight } from "react-icons/ti";
+import { TiChevronRight, TiStar } from "react-icons/ti";
 import Link from "next/link";
 import Search from "./Search";
 import styles from "./_commands.module.sass";
@@ -32,6 +32,8 @@ export default function List({ commands, mode, colors, isCategoryActive, onSearc
                                 </div>
                             : null}
                         </div>
+
+                        {command.starred ? <div className={styles["command--starred"]}><TiStar /></div> : null}
                     </div>
                 </Link>
             ))}

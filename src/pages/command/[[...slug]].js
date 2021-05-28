@@ -78,6 +78,7 @@ const CommandRoute = () => {
                 command={current}
                 returnToHome={returnToHome}
                 Markdown={ReactMarkdown}
+                botPrefix={settings.botPrefix}
                 t={settings.t}
             />
         </LayoutContainer>
