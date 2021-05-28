@@ -87,6 +87,7 @@ If you're missing any property, you're likely to stumble upon multiple errors.
 
 ## Configuration
 The configuration that can be found in `src/configs/app.js` comes with many configuration options.
+* `bot_prefix` - The default prefix for your bot (this is to be displayed in usage examples of commands)
 * `list_mode` - The method of displaying the commands list (`default`, `cards` or `compact`)
     * Default: A regular list with permission set visible and description preview (does not render .md syntax)
     * Cards: Commands displayed in a card view instead of a long list.
