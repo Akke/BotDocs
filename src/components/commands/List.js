@@ -13,7 +13,7 @@ export default function List({ commands, mode, colors, isCategoryActive, onSearc
                     <div className={styles.command}>
                         <div className={styles.command__expand}><TiChevronRight /></div>
 
-                        <div className={styles.command__context}>
+                        <div className={`${styles["command__context"]} ${command.starred ? styles["command--starred"] : null}`}>
                             <div className={styles["command__context-title"]}>
                                 <div className={styles["command__context-title__category"]} style={{"backgroundColor": colors[command.category.toLowerCase()]}}>{command.category}</div>
                                 <span className={styles["command__context-title__trigger"]}>{command.name}</span>
@@ -33,7 +33,7 @@ export default function List({ commands, mode, colors, isCategoryActive, onSearc
                             : null}
                         </div>
 
-                        {command.starred ? <div className={styles["command--starred"]}><TiStar /></div> : null}
+                        {command.starred ? <div className={styles.command__star}><TiStar /></div> : null}
                     </div>
                 </Link>
             ))}

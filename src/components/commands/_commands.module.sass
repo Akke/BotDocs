@@ -77,7 +77,13 @@
         @include animation(slideDown, 0.2s, ease)
         @include transition(background-color, 0.1s, ease)
 
-        &--starred
+        @include mediaScreen
+            padding: 1em 0
+
+            &--starred
+                width: 75% !important
+
+        &__star
             svg
                 font-size: 2em
                 display: block

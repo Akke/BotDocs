@@ -8,7 +8,8 @@ module.exports = {
             "description": "Gives a link to a website where you can find all the information you need.",
             "usage": "help",
             "params": [],
-            "example": "help"
+            "example": "help",
+            "starred": true
         },
         {
             "name": "invite",
@@ -18,7 +19,8 @@ module.exports = {
             "description": "Invite Damon to your Discord server.",
             "usage": "invite",
             "params": [],
-            "example": "invite"
+            "example": "invite",
+            "starred": true
         },
         {
             "name": "ping",
