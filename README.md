@@ -28,7 +28,7 @@ Want to suggest a new feature or feel like something needs an improvement? Don't
 1. Download the latest release (https://github.com/Akke/BotDocs/releases/latest) from the releases page.
 2. Upload everything to your desired directory.
 3. Install all dependencies with `npm i`
-4. Double check your commands data in `src/configs/commands.js` (create it, if it doesn't already exist) **NOTE: See below for detailed information about the commands configuration.**
+4. Create the file `src/configs/commands.js` **NOTE: See below for detailed information about the commands configuration.**
 5. Build BotDocs with `npm run build` (if you wish to run in developer mode without building, run `npm run dev`)
 6. Run BotDocs with `npm run start`
 7. (optional) See https://nextjs.org/docs/deployment for more deployment methods (e.g. Docker)
