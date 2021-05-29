@@ -65,7 +65,6 @@ const context = {
 export const AppContext = createContext(context);
 
 export const AppContextProvider = ({ children, value }) => {
-    const router = useRouter();
     const { t } = useTranslation();
 
     Object.assign(context.func, {
@@ -74,7 +73,7 @@ export const AppContextProvider = ({ children, value }) => {
 
     return (
         <AppContext.Provider value={context}>
-            {router.route === "/page/[[...title]]" ?
+            {context.middleware.r === "/page/[[...title]]" ?
                 <CustomPageContextProvider>{children}</CustomPageContextProvider> :
                 <CommandContextProvider>{children}</CommandContextProvider>}
         </AppContext.Provider>

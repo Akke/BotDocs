@@ -13,7 +13,7 @@ const CommandRoute = () => {
     const { categories, commands } = useCommandContextProvider();
 
     const routerMiddleware = context.middleware.router({
-        page: "/command", 
+        page: "/command",
         requiredParams: [{
             param: "slug",
             minLength: 2
