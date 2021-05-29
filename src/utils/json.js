@@ -58,7 +58,9 @@ export function deconstructCommands(config) {
         })
     });
 
-    const sortByStarred = deconstructed.sort((a, b) => b.starred);
+    const sortByStarred = deconstructed.sort((a, b) => {
+        return (a.starred - b.starred) ? 0 : a.starred ? -1 : 1
+    });
 
     return sortByStarred;
 };

@@ -109,6 +109,7 @@ module.exports = {
         {
             "guild_only": true,
             "name": "reset prefix",
+            "starred": true,
             "aliases": [
                 "remove prefix",
                 "resetprefix"
