@@ -1,5 +1,5 @@
 import fs, { existsSync, readdirSync, lstatSync, readFileSync } from "fs";
-import DataObj from "../../configs/commands";
+import DataObj from "../../configs/commands"
 import path from "path";
 
 export default function handler(req, res) {
